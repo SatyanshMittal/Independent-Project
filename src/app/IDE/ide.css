@@ -1,0 +1,9 @@
+video {
+    position: absolute;
+    height: 250px;
+    /* top: 90%; */
+    right: 10px;
+    bottom: 10px;
+    border-radius: 29%;
+    /* width: 348px; */
+}
