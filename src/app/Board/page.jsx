@@ -1,18 +1,26 @@
-"use client"
-import React from 'react'
-import { Excalidraw } from "@excalidraw/excalidraw";
-import Cam from '../components/Cam';
+'use client'
+import React, { Suspense } from 'react'
+import dynamic from 'next/dynamic'
 
-function Board() {
-    return (
-        <>
-            <h1 style={{ textAlign: "center" }}>For Sysytem Desgin Interviews</h1>
-            <Cam className='absolute z-20  bottom-3 left-3 h-[250px]  rounded-xl' />
-            <div style={{ height: "100vh" }}>
-                <Excalidraw />
-            </div>
-        </>
-    );
+const Excalidraw = dynamic(() => import('@excalidraw/excalidraw'), {
+  ssr: false,
+  loadableGenerated: {
+    webpack: () => ['@excalidraw/excalidraw'],
+    modules: ['@excalidraw/excalidraw'],
+  },
+})
+
+function Page() {
+  return (
+    <>
+      <h1 style={{ textAlign: 'center' }}>For System Design Interviews</h1>
+      <div style={{ height: '100vh' }}>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Excalidraw />
+        </Suspense>
+      </div>
+    </>
+  )
 }
 
-export default Board
+export default Page

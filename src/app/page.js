@@ -8,16 +8,20 @@ import Cam from './components/Cam'
 function Home() {
   return (
     <div>
-      <div className=" bg-purple-950 h-screen w-full flex justify-around items-center" >
+      <div className=" bg-purple-950 h-screen w-full flex  items-center flex-col    " >
 
         {/* <Image src='./img01.png'
           height="100"
           width="400"
         /> */}
 
+        <div className="text-white font-extrabold text-2xl pt-5">CollaboraHub</div>
+
+        <div className="flex justify-around items-center pt-[200px]">
+
         <div>
           <h1 className=" text-6xl text-white font-light mb-5 ">New generation </h1>
-          <h1 className=" text-6xl text-white font-light"> <span className="font-semibold">recruitment</span>  platform</h1>
+          <h1 className=" text-6xl text-white font-light"> <span className="font-semibold">Collaborative</span>  platform</h1>
           {/* <h1 className=" text-6xl text-white font-light mb-5 ">Platoform </h1> */}
           <p className="text-gray-400 pt-7 text-xl">Beyond the screen, connections bloom. Modern hiring, talent takes the room.</p>
 
@@ -103,6 +107,8 @@ function Home() {
         </svg>
 
         {/* <Cam /> */}
+
+        </div>
 
       </div>
     </div >

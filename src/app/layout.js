@@ -4,7 +4,7 @@ import Navbar from "./components/navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "CodeHexa",
+  title: "ColaboraHub",
   description: " Techacks 4.0",
 };
 
